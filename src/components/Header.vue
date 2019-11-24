@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../styles/header_styles.scss";
+@import "../styles/general_colors.scss";
 $brand_dashes_margin: 10px;
 
 .header {
