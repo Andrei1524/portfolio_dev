@@ -40,7 +40,7 @@ export default {
 $brand_dashes_margin: 10px;
 
 .header {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   align-items: center;

@@ -25,7 +25,7 @@ body {
 #app {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-img {
+img, span {
   display: block;
 }
 #nav {
@@ -39,5 +39,12 @@ img {
       color: #42b983;
     }
   }
+}
+
+/* PAGE */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 </style>
