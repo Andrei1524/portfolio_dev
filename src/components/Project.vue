@@ -6,6 +6,10 @@
             <div class="techs-wrap">
                 <span class="techs" v-for="t in project.tech" :key="t">{{ t }}</span>
             </div>
+
+            <div class="more">
+                <span>more..</span>
+            </div>
         </div>
     </div>
 </template>
@@ -33,7 +37,7 @@ h3 {
     height: 200px;
     background-size: cover !important;
     position: relative;
-
+    cursor: pointer;
     .project-title {
         margin: 0;
         background: #FFF;
@@ -41,6 +45,11 @@ h3 {
         text-align: center;
         padding: 6px 0;
         color: #4D4D4D;
+        user-select: none;
+    }
+
+    &:hover .project-hover{
+        opacity: 1;
     }
 }
 
@@ -50,6 +59,8 @@ h3 {
     width: 100%;
     position: relative;
     background: #212121d9;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .techs-wrap {
@@ -79,6 +90,8 @@ h3 {
         display: inline-block;
         font-size: 14px;
         
+        
+
         &:hover {
             animation-name: hoverTECH;
             animation-duration: 0.2s;
@@ -86,6 +99,10 @@ h3 {
             animation-timing-function: ease-out;
         }
 
+        &:active {
+            background: #b16363;
+        }
+        
         @keyframes hoverTECH {
             from {
                 top: 0px;
@@ -96,6 +113,38 @@ h3 {
                 top: -2px;
                 border-bottom: 4px solid #ffffff40;
             }
+        }
+
+
+    }
+
+}
+
+.more {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translatex(-50%);
+
+
+    span {
+        position: relative;
+        color: #ffffff94;
+        background: #424242;
+        margin: 0 2px;
+        padding: 4px 11px;
+        font-weight: 300;
+        text-transform: uppercase;
+        border: 1px solid #ffffff29;
+        border-bottom: 2px solid #a0a0a0b8;
+        cursor: pointer;
+        border-radius: 7px;
+        font-size: 18px;
+        box-shadow: 0px 3px 4px 0px transparent;
+        user-select: none;
+
+        &:active {
+            border-bottom: 1px solid #a0a0a0b8;
         }
     }
 }
