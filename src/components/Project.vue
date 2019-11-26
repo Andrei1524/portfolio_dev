@@ -22,7 +22,7 @@ export default {
         }
     },
     created() {
-        console.log(this.project.tech)
+        
     }
 }
 </script>
@@ -38,6 +38,9 @@ h3 {
     background-size: cover !important;
     position: relative;
     cursor: pointer;
+    border: 1px solid #d2d2d2;
+    transition: 0.4s;
+    overflow: hidden;
     .project-title {
         margin: 0;
         background: #FFF;
@@ -46,6 +49,11 @@ h3 {
         padding: 6px 0;
         color: #4D4D4D;
         user-select: none;
+        box-shadow: 0 2px 6px #0000002e;
+    }
+
+    &:hover {
+            box-shadow: 0 4px 9px #00000026;
     }
 
     &:hover .project-hover{
@@ -145,7 +153,9 @@ h3 {
 
         &:active {
             border-bottom: 1px solid #a0a0a0b8;
+           
         }
+
     }
 }
 
