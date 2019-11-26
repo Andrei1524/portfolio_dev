@@ -5,14 +5,33 @@
 </template>
 
 <script>
-import Project from '../components/Project'
+
+import Project from './Project'
 export default {
     components: {
         'app-project': Project
     },
     computed: {
         projects() {
-            return this.$store.getters.getProjects;
+            let projects = this.$store.getters.getProjects;
+            let filtered_projects = [];
+
+        
+            let tech = this.$store.getters.getFilteredTech;
+
+            
+            projects.forEach(pj => {
+                if (pj.tech.includes(tech)) {
+                    filtered_projects.push(pj)
+                }
+            })
+
+
+            if (Array.isArray(tech)) {
+                return projects
+            } else {
+                return filtered_projects;
+            }
         }
     }
 }

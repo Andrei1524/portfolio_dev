@@ -9,6 +9,15 @@
 import Header from './components/Header'
 
 export default {
+  data() {
+    return {}
+  },
+  created() {
+    // fill THE DEFAULT TECHS TO FILTER BY
+
+    this.$store.dispatch('initTech', this.$store.getters.getTechs)
+
+  },
   components: {
     'app-header': Header
   }
