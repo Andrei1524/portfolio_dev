@@ -20,4 +20,5 @@ export const projects = [
         tech: ["html", "css", "js", "expressjs", "reactjs", "node-ytdl-core"],
         image: "spotify_streamer_react_2.png"
     }
+
 ]

@@ -22,13 +22,13 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setTech({commit}, payload) {
-        commit('SET_TECH', payload);
+    setTech({ commit }, payload) {
+      commit('SET_TECH', payload);
     },
-    initTech({commit}, payload) {
+    initTech({ commit }, payload) {
       commit('INIT_TECH', payload);
     },
-    setDefaultFilters({commit}) {
+    setDefaultFilters({ commit }) {
       commit('SET_DEFAULT_FILTERS');
     }
   },
@@ -39,17 +39,17 @@ export default new Vuex.Store({
       return state.projects;
     },
     getTechs(state) {
-        let techs = [];
+      let techs = [];
 
-        state.projects.forEach(project => {
-          project.tech.forEach(t => {
-            if (!techs.includes(t)) {
-              techs.push(t)
-            }
-          })
+      state.projects.forEach(project => {
+        project.tech.forEach(t => {
+          if (!techs.includes(t)) {
+            techs.push(t)
+          }
         })
+      })
 
-        return techs;
+      return techs;
     },
     getFilteredTech(state) {
       return state.filter_tech;
