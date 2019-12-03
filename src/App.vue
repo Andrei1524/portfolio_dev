@@ -1,40 +1,42 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <router-view/>
+    <div class="page">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
+import Header from "./components/Header";
 
 export default {
   data() {
-    return {}
+    return {};
   },
   created() {
     // fill THE DEFAULT TECHS TO FILTER BY
-
-    this.$store.dispatch('initTech', this.$store.getters.getTechs)
-
+    this.$store.dispatch("loadProjects");
+    this.$store.dispatch("initTech", this.$store.getters.getTechs);
   },
   components: {
-    'app-header': Header
+    "app-header": Header
   }
-}
+};
 </script>
 
 <style lang="scss">
 body {
   margin: 0;
   border: none;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 }
 
 #app {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
-img, span {
+img,
+span {
   display: block;
 }
 #nav {

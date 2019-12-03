@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div>
     <app-project-filter></app-project-filter>
     <app-projects></app-projects>
   </div>

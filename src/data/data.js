@@ -1,7 +1,7 @@
 export const projects = [
     {
         id: 0,
-        title: "Netflix landing page",
+        title: "Netflix Landing Page",
         about: "Made from scratch with html & css & js, user can click on a feature and that feature will be displayed.",
         tech: ["html", "css", "js"],
         image: "netflix_landing_page.png"
