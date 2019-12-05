@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <app-header></app-header>
+    <span class="line"></span>
     <div class="page">
       <router-view />
     </div>
@@ -50,6 +51,12 @@ span {
       color: #42b983;
     }
   }
+}
+
+.line {
+  display: block;
+  height: 4px;
+  background: #d8d8d8;
 }
 
 /* PAGE */
