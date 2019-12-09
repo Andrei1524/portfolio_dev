@@ -8,7 +8,8 @@ import { projects } from "../data/data";
 export default new Vuex.Store({
   state: {
     projects: [],
-    filter_tech: []
+    filter_tech: [],
+    pageHeight: undefined
   },
   mutations: {
     SET_TECH(state, payload) {
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     LOAD_PROJECTS(state, payload) {
       state.projects = payload;
+    },
+    SET_HEIGHT(state, payload) {
+      state.pageHeight = payload;
     }
   },
   actions: {
@@ -43,6 +47,9 @@ export default new Vuex.Store({
       });
 
       commit("LOAD_PROJECTS", urledProjects);
+    },
+    setPageHeight({ commit }, payload) {
+      commit('SET_HEIGHT', payload);
     }
   },
   modules: {},

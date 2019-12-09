@@ -5,23 +5,30 @@
     <div class="page">
       <router-view />
     </div>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-
+import Footer from "./components/Footer";
 export default {
   data() {
-    return {};
+    return {
+      pageHeight: ""
+    };
   },
   created() {
     // fill THE DEFAULT TECHS TO FILTER BY
     this.$store.dispatch("loadProjects");
     this.$store.dispatch("initTech", this.$store.getters.getTechs);
   },
+  mounted() {},
+  updated() {},
+  methods: {},
   components: {
-    "app-header": Header
+    "app-header": Header,
+    "app-footer": Footer
   }
 };
 </script>

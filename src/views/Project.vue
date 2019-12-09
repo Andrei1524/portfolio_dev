@@ -13,6 +13,19 @@
         alt=""
       />
     </div>
+
+    <div class="project-about">
+      <h2>About</h2>
+      <p>{{ project.about }}</p>
+    </div>
+    <div class="project-tech">
+      <h2>Technologies</h2>
+      <ul>
+        <li v-for="tech in project.tech" :key="tech">
+          {{ tech.toUpperCase() }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -69,5 +82,15 @@ export default {
 .project-image img {
   width: 75%;
   margin: 30px auto;
+}
+.project-about,
+.project-tech {
+  color: #4d4d4d;
+  margin: 20px 0;
+  margin-top: 40px;
+  h2,
+  p {
+    margin: 0px;
+  }
 }
 </style>
