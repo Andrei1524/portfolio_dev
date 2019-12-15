@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     projects: [],
     filter_tech: [],
-    pageHeight: undefined
+    footerAbsolute: undefined
   },
   mutations: {
     SET_TECH(state, payload) {
@@ -24,8 +24,8 @@ export default new Vuex.Store({
     LOAD_PROJECTS(state, payload) {
       state.projects = payload;
     },
-    SET_HEIGHT(state, payload) {
-      state.pageHeight = payload;
+    SET_FOOTER(state, payload) {
+      state.footerAbsolute = payload;
     }
   },
   actions: {
@@ -48,8 +48,8 @@ export default new Vuex.Store({
 
       commit("LOAD_PROJECTS", urledProjects);
     },
-    setPageHeight({ commit }, payload) {
-      commit('SET_HEIGHT', payload);
+    setFooterAbsolute({ commit }, payload) {
+      commit('SET_FOOTER', payload);
     }
   },
   modules: {},
@@ -77,6 +77,9 @@ export default new Vuex.Store({
     },
     getFilteredTech(state) {
       return state.filter_tech;
+    },
+    getFooterState(state) {
+      return state.footerAbsolute;
     }
   }
 });

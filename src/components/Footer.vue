@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer :style="{ position: getFooterState }">
     <p>
       Mandrican Andrei |
       <a href="mailto:mandrican.andrei@gmail.com">mandrican.andrei@gmail.com</a>
@@ -8,11 +8,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    getFooterState() {
+      return this.$store.getters.getFooterState;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 footer {
+  bottom: 0;
+  width: 100%;
   text-align: center;
   background: #151515;
   padding: 20px 0;

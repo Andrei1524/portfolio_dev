@@ -41,6 +41,7 @@ h3 {
   width: 340px;
   height: 200px;
   background-size: cover !important;
+  background-position: center !important;
   position: relative;
   cursor: pointer;
   border: 1px solid #d2d2d2;

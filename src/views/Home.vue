@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="home"
-    :style="{ height: 'calc(100vh - ' + (pageHeight - 14) + 'px' + ')' }"
-  >
+  <div class="home">
     <app-project-filter></app-project-filter>
     <app-projects></app-projects>
   </div>
@@ -16,22 +13,20 @@ import Projects from "../components/Projects";
 export default {
   name: "home",
   data() {
-    return {
-      pageHeight: undefined
-    };
+    return {};
   },
   components: {
     "app-projects": Projects,
     "app-project-filter": ProjectFilter
   },
   mounted() {
-    console.log(this.$el.clientHeight);
-    this.pageHeight = this.$el.clientHeight;
+    this.$store.dispatch("setFooterAbsolute", undefined);
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .home {
+  margin: 2em 0;
 }
 </style>
