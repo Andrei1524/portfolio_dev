@@ -9,7 +9,8 @@ export default new Vuex.Store({
   state: {
     projects: [],
     filter_tech: [],
-    footerAbsolute: undefined
+    footerAbsolute: undefined,
+    burger_open: false
   },
   mutations: {
     SET_TECH(state, payload) {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
     },
     SET_FOOTER(state, payload) {
       state.footerAbsolute = payload;
+    },
+    OPEN_BURGER_MENU(state) {
+      state.burger_open = !state.burger_open;
     }
   },
   actions: {
@@ -50,6 +54,9 @@ export default new Vuex.Store({
     },
     setFooterAbsolute({ commit }, payload) {
       commit('SET_FOOTER', payload);
+    },
+    openBurgerMenu({ commit }) {
+      commit('OPEN_BURGER_MENU');
     }
   },
   modules: {},
@@ -80,6 +87,9 @@ export default new Vuex.Store({
     },
     getFooterState(state) {
       return state.footerAbsolute;
+    },
+    getBurgerMenuState(state) {
+      return state.burger_open;
     }
   }
 });

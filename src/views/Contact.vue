@@ -88,8 +88,9 @@ export default {
 
 <style lang="scss" scoped>
 .form {
-  width: 500px;
+  max-width: 500px;
   margin: 40px auto;
+  padding: 0 8px;
 }
 
 .form form div {

@@ -6,7 +6,8 @@
       @click="selectFilter(tech)"
       v-for="tech in techs"
       :key="tech"
-    >{{ tech }}</span>
+      >{{ tech }}</span
+    >
   </div>
 </template>
 
@@ -56,8 +57,8 @@ export default {
 .filter-menu {
   display: flex;
   margin: 20px 0;
-  height: 50px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .tech-filter {
   position: relative;
@@ -75,7 +76,8 @@ export default {
   height: fit-content;
   width: fit-content;
   transition: 0.2s;
-
+  margin-top: 2px;
+  margin-bottom: 2px;
   &:hover {
     animation-name: hoverTECH;
     animation-duration: 0.2s;
@@ -96,6 +98,18 @@ export default {
       top: -2px;
       border-bottom: 4px solid #ababab;
     }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .filter-menu {
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .filter-menu {
+    height: 50px;
   }
 }
 </style>

@@ -37,4 +37,10 @@ footer {
     color: #e8e8e8;
   }
 }
+
+@media only screen and (max-width: 360px) {
+  footer {
+    letter-spacing: 1px;
+  }
+}
 </style>
