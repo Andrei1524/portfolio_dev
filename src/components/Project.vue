@@ -3,7 +3,7 @@
     class="project"
     :style="{
       background:
-        'url(' + require('@/assets/project_pictures/' + project.image) + ')'
+        'url(' + require('@/assets/project_pictures/' + project.images[0]) + ')'
     }"
   >
     <h3 class="project-title">{{ project.title }}</h3>

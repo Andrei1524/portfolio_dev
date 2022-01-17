@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <app-project-filter></app-project-filter>
+    <h2>NEWEST PROJECTS: </h2>
     <app-projects></app-projects>
   </div>
 </template>

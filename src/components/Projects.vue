@@ -10,10 +10,14 @@
 
 <script>
 import Project from "./Project";
+import _ from 'lodash'
+
 export default {
   components: {
     "app-project": Project
   },
+
+
   computed: {
     projects() {
       let projects = this.$store.getters.getProjects;

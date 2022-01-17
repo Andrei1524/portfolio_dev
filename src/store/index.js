@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import _ from 'lodash'
 
 Vue.use(Vuex);
 
@@ -62,7 +63,7 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     getProjects(state) {
-      return state.projects;
+      return _.reverse(state.projects);
     },
     getProject: state => projectTitle => {
       let project = state.projects.find(p => p.urled == projectTitle);

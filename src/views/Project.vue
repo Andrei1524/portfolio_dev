@@ -9,17 +9,17 @@
       >VISIT THE WEBSITE</a
     >
 
-    <div class="project-image">
+    <div class="project-image" v-for="image in project.images" :key="image">
       <img
         v-if="imgWidth"
-        :style="{ width: this.imgWidth }"
-        :src="require('@/assets/project_pictures/' + project.image)"
+        :style="{ width: imgWidth }"
+        :src="require('@/assets/project_pictures/' + image)"
         alt=""
       />
     </div>
 
     <div class="project-about">
-      <h2>About</h2>
+      <h1>About</h1>
       <p>{{ project.about }}</p>
     </div>
     <div class="project-tech">
@@ -50,7 +50,7 @@ export default {
   mounted() {
     let image = new Image();
 
-    image.src = require("../assets/project_pictures/" + this.project.image);
+    image.src = require("../assets/project_pictures/" + this.project.images[0]);
 
     // if (image.height > 1500) {
     //   this.imgWidth = "30%";
@@ -59,7 +59,7 @@ export default {
     // }
 
     if (image.height > 500 && image.width < 1300) {
-      this.imgWidth = "40%";
+      this.imgWidth = "60%";
     } else {
       this.imgWidth = "75%";
     }
@@ -95,7 +95,7 @@ export default {
 }
 
 .project-image img {
-  width: 75%;
+  width: 100%;
   margin: 30px auto;
 }
 .project-about,
@@ -106,6 +106,8 @@ export default {
   h2,
   p {
     margin: 0px;
+    font-size: 24px;
+    white-space: pre;
   }
 }
 

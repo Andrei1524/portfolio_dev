@@ -5,7 +5,7 @@
         <div class="brand-text-wrapper">
           <div class="brand-text">
             <h1>Mandrican Andrei</h1>
-            <p>front-end & a bit on back-end</p>
+            <p>front-end & back-end</p>
           </div>
         </div>
 
